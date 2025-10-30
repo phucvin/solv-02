@@ -18,3 +18,12 @@ const registerServiceWorker = async () => {
 };
 
 registerServiceWorker();
+
+async function dispatch(action) {
+  const res = await fetch('/api', { method: 'POST', body: JSON.stringify(action) });
+  if (!res.ok) {
+    console.error('dispatch response error', res.status);
+  } else {
+    console.log('dispatch returned', await res.json());
+  }
+}
