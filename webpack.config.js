@@ -6,7 +6,7 @@ module.exports = {
     sw: './src/sw.js',
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };
