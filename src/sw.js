@@ -65,8 +65,9 @@ self.addEventListener('fetch', (event) => {
             console.error('Fetch failed:', event.request.url, error);
             // You could return an offline page here, or a fallback response
             // For example: return caches.match('/offline.html');
-            return new Response('<h1>Offline</h1><p>You appear to be offline.</p>', {
-              headers: { 'Content-Type': 'text/html' }
+            return new Response('', {
+              headers: { 'Content-Type': 'text/html' },
+              status: 503,
             });
           });
       })
