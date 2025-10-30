@@ -1,7 +1,7 @@
 function component() {
   const element = document.createElement('div');
 
-  element.innerHTML = 'Hello webpack 2';
+  element.innerHTML = 'Hello webpack 3';
 
   return element;
 }
